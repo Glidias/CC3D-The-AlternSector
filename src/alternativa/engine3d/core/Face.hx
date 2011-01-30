@@ -21,5 +21,5 @@ extern class Face {
 	function getUV(p0 : flash.geom.Vector3D) : flash.geom.Point;
 	function toString() : String;
 	static var collector : Face;
-	static function Create() : Face;
+	//static function Create() : Face;
 }

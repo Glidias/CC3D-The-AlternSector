@@ -14,6 +14,6 @@ extern class Sector  {
 		// -- Currently not used atm.
 		// (Optional/on-demand)
 		// A container of inner objects/geometry to test against static stuff.
-		//public var container:Object3DContainer;  
+		public var container:Object3DContainer;  
 		
 }

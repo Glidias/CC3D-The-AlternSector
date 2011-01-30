@@ -6,5 +6,5 @@ extern class Wrapper {
 	function new() : Void;
 	function create() : Wrapper;
 	static var collector : Wrapper;
-	static function Create() : Wrapper;
+	//static function Create() : Wrapper;
 }

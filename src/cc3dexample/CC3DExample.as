@@ -218,27 +218,5 @@ package cc3dexample {
 }
 
 
-package alternsector.physics.adaptors.utils {
-	import flash.geom.Vector3D;
-	public class Vector3DUtils {
-		static public function distanceBetween(p1 : flash.geom.Vector3D,p2 : flash.geom.Vector3D) : Number {
-			var dx : Number = p2.x - p1.x;
-			var dy : Number = p2.y - p1.y;
-			var dz : Number = p2.z - p1.z;
-			return Math.sqrt(dx * dx + dy * dy + dz * dz);
-		}
-		
-		static public function lengthOf(vec : flash.geom.Vector3D) : Number {
-			return Math.sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
-		}
-		
-		static public function getNewScaledVector(src : flash.geom.Vector3D,scalar : Number) : flash.geom.Vector3D {
-			return new flash.geom.Vector3D(src.x * scalar,src.y * scalar,src.z * scalar);
-		}
-		
-	}
-}
-
-
 
 
