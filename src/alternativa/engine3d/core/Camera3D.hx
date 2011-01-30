@@ -1,0 +1,41 @@
+package alternativa.engine3d.core;
+
+extern class Camera3D extends Object3D {
+	var debug : Bool;
+	var diagram(default,null) : flash.display.DisplayObject;
+	var diagramAlign : String;
+	var diagramHorizontalMargin : Float;
+	var diagramVerticalMargin : Float;
+	var farClipping : Float;
+	var focalLength : Float;
+	var fov : Float;
+	var fpsUpdatePeriod : Int;
+	var lastFace : Face;
+	var lastVertex : Vertex;
+	var lastWrapper : Wrapper;
+	var nearClipping : Float;
+	var numDraws : Int;
+	var numOccluders : Int;
+	var numPolygons : Int;
+	var numTriangles : Int;
+	var occludedAll : Bool;
+	var occluders : flash.Vector<Vertex>;
+	var timerUpdatePeriod : Int;
+	var view : View;
+	var viewSizeX : Float;
+	var viewSizeY : Float;
+	function new() : Void;
+	function addToDebug(p0 : Int, p1 : Dynamic) : Void;
+	function calculateRay(p0 : flash.geom.Vector3D, p1 : flash.geom.Vector3D, p2 : Float, p3 : Float) : Void;
+	function checkInDebug(p0 : Object3D) : Int;
+	function clearOccluders() : Void;
+	function clip(p0 : Face, p1 : Int) : Face;
+	function cull(p0 : Face, p1 : Int) : Face;
+	function projectGlobal(p0 : flash.geom.Vector3D) : flash.geom.Vector3D;
+	function removeFromDebug(p0 : Int, p1 : Dynamic) : Void;
+	function render() : Void;
+	function sortByAverageZ(p0 : Face) : Face;
+	function sortByDynamicBSP(p0 : Face, p1 : Float, ?p2 : Face) : Face;
+	function startTimer() : Void;
+	function stopTimer() : Void;
+}
