@@ -19,7 +19,7 @@ Basically, a package containing a mix of Hx externs and As classes. Currently, i
 
 What's with the .hx extern classes under "alternativa" package?
 ---------------------------------------------------------------
-These are some extern stub codes generated out from Alternativa3D's current SWC api structure, to allow a Haxe library code-base to work with part of Alternativa3D's codebase. Take note though that many of the outputted variables are readily not usable or available in Haxe as they actually exist under the Flash alternativa3d namespace. Currently, the Haxe-code-base uses the main public variables from Alternativa3D's core classes, such as Object3D's position & EllipsoidCollider, to handle basic interaction between both libraries.
+These are some extern stub codes generated out from Alternativa3D's current SWC api structure, to allow a Haxe library code-base to work with part of Alternativa3D's codebase. Take note though that many of the outputted variables are readily not usable or available in Haxe as they actually exist under the alternativa3d Flash namespace. Currently, the Haxe-code-base uses the main public variables from Alternativa3D's core classes, such as Object3D's position & EllipsoidCollider, to handle basic interaction on Alternativa3D's objects. By simply using externs (ie. stub class references), it avoids the overhead of having to create "adaptor" bridge classes to target different platforms' classes.
 
 ___________________________________
 
@@ -31,7 +31,7 @@ Why use Haxe?
 -------------
 I guess it's the flexibility/performance in coding stuff with the ability to inline method calls without having to write everything out manually line-by-line. Additionally, the code-base can be recompiled with different compile-macro directives/flags, to allow for different settings/features to fit specific application needs. This allow for specific behaviour to be hard-coded into the library rather than rely on "need-to-check" settings. Alchemy op-codes are also readily available in Haxe, which also allows for much faster storing/retrieval of raw integer/float data.
 
-However, I still find that Haxe has it's limitations with it's (rather bad) use of code-generated Boot.constructor calls for classes containing constructor code, so I avoid this by adopting the "Empty" constructor approach for core cc3d classes, relying instead on static method calls with inlined code to initialize the properties of a newly instantiated object. This also allows for class-based  pooling collectors and thus, re-using of instances. Beyond Haxe, the final output platform is still delivered and compiled in Flash. With a Haxe code-base, it's still possible in the future to have a code-base that allows for targetting different platforms (which may be none-Flash based as well.)
+However, I still find that Haxe has it's limitations with it's (rather bad) use of code-generated Boot.constructor calls for classes containing constructor code under Flash, so I avoid this by adopting the "Empty" constructor approach for core cc3d classes, relying instead on static method calls with inlined code to initialize the properties of a newly instantiated objects. This also allows for class-based  pooling collectors and thus, re-using of instances. With a Haxe code-base, it's actually possible in the future to have a code-base that allows for targetting different platforms/engines (which may be none-Flash based as well), since Haxe's use of  "externs" also allow for easy linking up to different engines and platforms.
 
 Roadmap:
 -----------
