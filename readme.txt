@@ -2,18 +2,15 @@ Currently, this is the code repository for housing the AlternSector CC3D library
 
 There are 2 FlashDevelop projects.
 
-CC3DExample.as3proj (The AS3 applcation output. For Flash developers targeting Alternativa3D platform)
+CC3DExample.as3proj 
 --------------------
-Example 'Alternativa3DCC3D.swf' compile under Flash/Alternativa3D using the current "alternsector_cc3d.swc" & "Alternativa3D 7.6.0.swc" libraries under "lib" folder.
+The AS3 applcation output. For Flash developers targeting Alternativa3D platform
 
 
-AlternSector_CC3D_Haxe.hxproj (The core Haxe-compiled SWC library codebase)
+AlternSector_CC3D_Haxe.hxproj 
 -------------------------------
-Test '_haxebuild.swf' compile and development platform on the core SWC library codebase under src "alternsector". To compile "alternsector_cc3d.swc", run the "altern_cc3d_swc.hxml" file in the "src" folder (this requires Haxe to be installed). 
+The core Haxe-compiled SWC library codebase
 
-Tip: One way of being able to compile both the Haxe-code-base's SWC and compile the AS3 final output at the same time (instead of running the hxml prior to compiling), is to add a Pre-Build Command Line in any FlashDevelop AS3 project like:
-"haxe -swf9 C:/pathToWorkingFolder/lib/alternsector_cc3d.swc -swf-version 10 -cp C:\pathToWorkingFolder\src -main alternsector.AlternSector" together with other compile-time flags that you may wish to use for a partiucular project, matching the hxml perhaps.
-This would allow pre-compiling of the SWC library via Haxe prior to compiling/previewing your main Actionscript application which uses that library. You'd use this if you're testing new features on the Haxe-code-base on a particulartarget platform.
 
 What is the "portal" package under the src folder?
 --------------------------------------------------
