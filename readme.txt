@@ -14,7 +14,7 @@ The core Haxe-compiled SWC library codebase
 
 What is the "portal" package under the src folder?
 --------------------------------------------------
-Basically, a package containing a mix of Hx externs and As classes. Currently, it has 2 classes of the same name (Sector.hx, Sector.as), which is a Haxe extern and Flash-based AS file respectively. The Haxe extern defines the bare interface for the final output compile, but the Flash-based Sector.as file can contain any "extra" information (or extend any class for that matter) specific to Flash and your application. 
+Basically, a package containing a mix of Hx externs and As classes. Currently, it has 2 classes of the same name (Sector.hx, Sector.as), which is a Haxe extern and Flash-based AS file respectively. The Haxe extern defines the bare interface for the final output compile, but the Flash-based Sector.as file can contain any "extra" information (or extend any class for that matter) specific to Flash and your application. By definition, a Sector represents a zone in a world where physics is simulated and would probably (in the future) have optional spatial partioning schemes for larger sector spaces. SectorWorld is used to run/manage multiple sectors, and connect them together through portals.
 
 
 What's with the .hx extern classes under "alternativa" package?
