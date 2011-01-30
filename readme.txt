@@ -2,7 +2,7 @@ Currently, this is the code repository for housing the AlternSector CC3D library
 
 There are 2 FlashDevelop projects.
 
-CC3DExample.as3proj (The AS3 applcation output. For Flash developers)
+CC3DExample.as3proj (The AS3 applcation output. For Flash developers targeting Alternativa3D platform)
 --------------------
 Example 'Alternativa3DCC3D.swf' compile under Flash/Alternativa3D using the current "alternsector_cc3d.swc" & "Alternativa3D 7.6.0.swc" libraries under "lib" folder.
 
@@ -17,7 +17,7 @@ This would allow pre-compiling of the SWC library via Haxe prior to compiling/pr
 
 What is the "portal" package under the src folder?
 --------------------------------------------------
-Basically, a package containing a mix of Hx externs and As classes. Currently, it has 2 classes of the same name (Sector.hx, Sector.as), which is a Haxe extern and Flash-based AS file respectively. The Haxe extern defines the bare interface for the final output compile, but the Flash-based Sector.as file can contain any "extra" information specific to Flash and your application. 
+Basically, a package containing a mix of Hx externs and As classes. Currently, it has 2 classes of the same name (Sector.hx, Sector.as), which is a Haxe extern and Flash-based AS file respectively. The Haxe extern defines the bare interface for the final output compile, but the Flash-based Sector.as file can contain any "extra" information (or extend any class for that matter) specific to Flash and your application. 
 
 Why use Haxe?
 -------------
